@@ -4,7 +4,7 @@ android {
     compileSdkVersion 26
     defaultConfig {
         applicationId "com.example.danila.examapplication"
-        minSdkVersion 19
+        minSdkVersion 26
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
@@ -21,7 +21,12 @@ android {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:26.1.0'
-    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'org.apache.commons:commons-lang3:3.4'
+    compile 'com.fasterxml.jackson.core:jackson-annotations:2.9.4'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.9.4'
+    compile 'com.fasterxml.jackson.core:jackson-core:2.9.4'
+    compile 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.9.4'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
