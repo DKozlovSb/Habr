@@ -13,6 +13,7 @@ import java.net.URL;
 
 
 public class Test {
+
     public static void main(String[] args) throws URISyntaxException, IOException {
 
         Test nash = new Test();
@@ -20,8 +21,7 @@ public class Test {
 
     }
 
-    public  void run() throws IOException, URISyntaxException{
-
+    public  String run() throws IOException, URISyntaxException{
         ObjectMapper objectMapper = new XmlMapper();
         objectMapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
         objectMapper.enable(DeserializationFeature.ACCEPT_EMPTY_STRING_AS_NULL_OBJECT);
@@ -29,7 +29,7 @@ public class Test {
         Rss result = objectMapper.readValue(
                 new URL("https://habrahabr.ru/rss/hubs/all/"),
                 Rss.class);
-        System.out.println(result.toString());
+       return result.toString();
     }
 }
 
@@ -88,7 +88,6 @@ class Channel{
     @JacksonXmlProperty(isAttribute=false, localName = "item")
     Item[] items;
 
-   
 
     @Override
     public String toString() {
