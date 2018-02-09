@@ -59,7 +59,6 @@ public class MainActivity extends AppCompatActivity  {
     class t implements Runnable{
             @Override
             public void run() {
-
             }
 
     }
